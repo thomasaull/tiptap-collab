@@ -7,6 +7,8 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "prosemirror-collab": "^1.1.1",
+    "tiptap": "^0.19.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
