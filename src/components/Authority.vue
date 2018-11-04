@@ -4,12 +4,14 @@
   Editor 1 <br>
   <Editor
     ref="editorAlpha"
+    :schema="schema"
     @receiveSteps="receiveSteps"
   />
 
   Editor 2 <br>
   <Editor
     ref="editorBravo"
+    :schema="schema"
     @receiveSteps="receiveSteps"
   />
 </div>
@@ -17,7 +19,8 @@
 </template>
 
 <script>
-import Editor from '@/components/Editor.vue'
+import Editor from '@/components/RawEditor.vue'
+import mySchema from '@/basic-schema'; // eslint-disable-line
 
 export default {
   name: 'Notebook',
@@ -28,7 +31,8 @@ export default {
       authority: {
         steps: [],
         stepClientIDs: []
-      }
+      },
+      schema: mySchema
     }
   },
 
